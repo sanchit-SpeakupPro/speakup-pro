@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speakup PRO — Free AI meeting notes that never leave your laptop</title>
+  <meta name="description" content="Speakup PRO records your meetings, transcribes them live, knows who said what, and writes the notes — 100% free, no account, and everything runs on your own computer." />
+  <meta property="og:title" content="Speakup PRO — Free AI meeting notes" />
+  <meta property="og:description" content="Live transcripts, speaker labels, AI notes and an AI assistant. Free forever. Private by design — it all runs on your computer." />
+  <meta property="og:image" content="assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b0a10" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav">
+    <a href="#" class="brand" aria-label="Speakup PRO home">
+      <img src="assets/icon-256.png" alt="" width="34" height="34" />
+      <span>Speakup <b>PRO</b></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#download" class="btn btn-sm btn-glow nav-cta">Download free</a>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="pill-badge"><span class="dot"></span> 100% free · No account · Works offline</div>
+        <h1>Talk freely.<br /><span class="grad">We'll take the minutes.</span></h1>
+        <p class="lead">Speakup PRO listens to your meetings, writes a live transcript, knows <em>who said what</em>, and turns it all into crisp notes and action items — right on your own computer.</p>
+        <div class="hero-ctas">
+          <a href="#download" class="btn btn-lg btn-glow" data-download-primary>
+            <span class="os-ico" data-os-icon></span><span data-os-label>Download for free</span>
+          </a>
+          <a href="#how" class="btn btn-lg btn-ghost">See how it works</a>
+        </div>
+        <p class="hero-meta">Mac (Apple Silicon &amp; Intel) · Windows 10/11 · <span data-os-size>~140 MB</span></p>
+      </div>
+
+      <!-- Animated app window -->
+      <div class="stage" aria-label="Animated preview of Speakup PRO transcribing a meeting">
+        <div class="window">
+          <div class="win-bar">
+            <i></i><i></i><i></i>
+            <span class="win-title">Product launch sync</span>
+            <span class="rec-chip"><span class="rec-dot"></span><span id="demoTimer">00:00</span></span>
+          </div>
+          <div class="win-body">
+            <div class="pane transcript" id="demoTranscript">
+              <div class="pane-label">Live transcript</div>
+            </div>
+            <div class="pane notes">
+              <div class="pane-label">AI notes <span class="spark">✦</span></div>
+              <div id="demoNotes" class="demo-notes"></div>
+            </div>
+          </div>
+          <div class="win-pill">
+            <span class="rec-btn"></span>
+            <span class="wave" id="demoWave"></span>
+          </div>
+        </div>
+        <div class="float-card fc-1"><span>🔒</span> Never leaves your laptop</div>
+        <div class="float-card fc-2"><span>👥</span> 4 speakers detected</div>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <section class="marquee" aria-label="Made for">
+      <div class="marquee-track">
+        <span>Stand-ups</span><span>Client calls</span><span>Lectures</span><span>Interviews</span><span>1:1s</span><span>Brainstorms</span><span>Podcasts</span><span>Board meetings</span><span>Sales calls</span><span>Research</span>
+        <span>Stand-ups</span><span>Client calls</span><span>Lectures</span><span>Interviews</span><span>1:1s</span><span>Brainstorms</span><span>Podcasts</span><span>Board meetings</span><span>Sales calls</span><span>Research</span>
+      </div>
+    </section>
+
+    <!-- ================= MESSY → CLEAN ================= -->
+    <section class="section polish" id="how-it-sounds">
+      <div class="section-head">
+        <span class="eyebrow">Messy in. Clean out.</span>
+        <h2>People don't talk in bullet points.<br /><span class="grad">Your notes should.</span></h2>
+        <p>Ums, restarts, cross-talk — Speakup PRO cleans it up, keeps everyone's words, and pulls out what matters.</p>
+      </div>
+      <div class="polish-card">
+        <div class="polish-toggle" role="tablist" aria-label="Transcript view">
+          <button role="tab" aria-selected="true" data-view="raw">What was said</button>
+          <button role="tab" aria-selected="false" data-view="clean">Polished</button>
+          <button role="tab" aria-selected="false" data-view="notes">AI notes</button>
+          <span class="toggle-thumb"></span>
+        </div>
+        <div class="polish-views">
+          <div class="pv pv-raw active" data-pane="raw">
+            <p><b class="who c1">Priya</b> so um okay let's let's get started uh Daniel how's the the mobile release going</p>
+            <p><b class="who c2">Daniel</b> yeah so we're we're on track the beta goes out to testers on Monday and uh we fixed the login crash finally</p>
+            <p><b class="who c4">Rishi</b> I can I can set up the analytics dashboard so we like track beta signups</p>
+            <p><b class="who c1">Priya</b> perfect Rishi have that ready by uh Wednesday</p>
+            <p><b class="who c2">Daniel</b> one risk is the app store review it could take a few extra days you know</p>
+          </div>
+          <div class="pv pv-clean" data-pane="clean">
+            <p><b class="who c1">Priya</b> <s>so um</s> Okay, let's get started. Daniel, how's the mobile release going?</p>
+            <p><b class="who c2">Daniel</b> We're on track. The beta goes out to testers on Monday, and we fixed the login crash<s> finally</s>.</p>
+            <p><b class="who c4">Rishi</b> I can set up the analytics dashboard so we can track beta signups.</p>
+            <p><b class="who c1">Priya</b> Perfect. Rishi, have that ready by Wednesday.</p>
+            <p><b class="who c2">Daniel</b> One risk is the App Store review — it could take a few extra days.</p>
+            <div class="legend"><span><s>struck</s> fillers removed</span><span>✓ punctuation &amp; names fixed</span></div>
+          </div>
+          <div class="pv pv-notes" data-pane="notes">
+            <h4>Summary</h4>
+            <p>The mobile beta ships to testers on Monday after the login crash fix. Analytics will track signups, and App Store review timing is the main risk.</p>
+            <h4>Action items</h4>
+            <ul class="tasks">
+              <li><span class="box"></span><b class="who c4">Rishi</b> Set up the beta analytics dashboard — <em>by Wednesday</em></li>
+              <li><span class="box"></span><b class="who c2">Daniel</b> Send the beta to testers — <em>Monday</em></li>
+            </ul>
+            <h4>Risks</h4>
+            <p>App Store review could add a few days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURES (bento) ================= -->
+    <section class="section" id="features">
+      <div class="section-head">
+        <span class="eyebrow">Everything you need. Nothing you pay for.</span>
+        <h2>A full AI notetaker,<br /><span class="grad">living on your desktop.</span></h2>
+      </div>
+      <div class="bento">
+        <article class="tile t-wide t-live">
+          <div class="tile-copy">
+            <h3>Live transcript as you talk</h3>
+            <p>Words appear seconds after they're spoken, with smart pauses so sentences never get chopped in half. Click any line to replay that moment.</p>
+          </div>
+          <div class="mini-transcript" aria-hidden="true">
+            <div><span class="t">00:04</span> Let's lock the launch date first.</div>
+            <div><span class="t">00:09</span> March third works for engineering.</div>
+            <div class="typing-line"><span class="t live">00:13</span> <span class="typewriter" data-text="Then marketing needs the copy by Friday."></span><span class="caret"></span></div>
+          </div>
+        </article>
+
+        <article class="tile t-speakers">
+          <h3>Knows who said what</h3>
+          <p>Voices are recognised automatically. Rename "Speaker 2" to "Priya" once and it sticks.</p>
+          <div class="chips" aria-hidden="true">
+            <span class="chip c1">Priya</span><span class="chip c2">Daniel</span><span class="chip c3">Karen</span><span class="chip c4">Rishi</span>
+          </div>
+        </article>
+
+        <article class="tile t-notes">
+          <h3>Notes that write themselves</h3>
+          <p>Summary, key points, action items with owners and deadlines — the moment you hit stop.</p>
+          <ul class="mini-tasks" aria-hidden="true">
+            <li><span class="box on"></span> Rishi — analytics dashboard</li>
+            <li><span class="box"></span> Karen — submit by Thursday</li>
+          </ul>
+        </article>
+
+        <article class="tile t-assistant">
+          <h3>An AI assistant that was in the room</h3>
+          <p>Ask across every meeting you've ever recorded — or anything else.</p>
+          <div class="chat" aria-hidden="true">
+            <div class="b user">What does Rishi owe us this week?</div>
+            <div class="b bot">The beta analytics dashboard, due <b>Wednesday</b> (from Product launch sync).</div>
+            <div class="b user">Who built you?</div>
+            <div class="b bot">I was built by <b>Sanchit Goyal</b> ✦</div>
+          </div>
+        </article>
+
+        <article class="tile t-writing">
+          <h3>Writing check, built in</h3>
+          <p>Grammar, spelling, clarity and tone fixes for your notes and emails. Accept with one click.</p>
+          <p class="wc-demo" aria-hidden="true">Their <span class="fix">→ There</span> are a few <u>thing</u><span class="fix">→ things</span> to <span class="nw"><u>discus</u><span class="fix">→ discuss</span>.</span></p>
+        </article>
+
+        <article class="tile t-calls">
+          <h3>Hears the whole call</h3>
+          <p>Captures your mic <em>and</em> your computer's audio — so Zoom, Meet and Teams participants get transcribed too.</p>
+          <div class="apps" aria-hidden="true"><span>Zoom</span><span>Meet</span><span>Teams</span><span>Slack</span></div>
+        </article>
+
+        <article class="tile t-small t-accuracy">
+          <div class="big-num">2-pass</div>
+          <p>Live transcript while you talk, then a high-accuracy pass with a larger model when you stop.</p>
+        </article>
+        <article class="tile t-small t-langs">
+          <div class="big-num">12+</div>
+          <p>Languages, including English, Hindi, Spanish, French, German and Japanese.</p>
+        </article>
+        <article class="tile t-small t-export">
+          <div class="big-num">⌥R</div>
+          <p>One shortcut to start and stop. Search, copy or export any meeting as Markdown.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= PRIVACY ================= -->
+    <section class="section privacy" id="privacy">
+      <div class="privacy-grid">
+        <div>
+          <span class="eyebrow">Private by design</span>
+          <h2>Your meetings never <span class="grad">leave your laptop.</span></h2>
+          <p class="lead-sm">Most AI notetakers upload your calls to someone else's servers. Speakup PRO runs its speech recognition, speaker detection and AI right on your own computer. No cloud. No bot joining your calls. No account to hack.</p>
+          <ul class="checks">
+            <li>Works fully offline after a one-time setup</li>
+            <li>No sign-up, no email, no tracking</li>
+            <li>Recordings and notes stay in a folder you control</li>
+          </ul>
+        </div>
+        <div class="flow-diagram" aria-label="Diagram: audio goes from your microphone to the AI on your laptop, never to the cloud">
+          <div class="node"><span class="ic">🎙️</span><span class="txt"><b>Your voice</b><small>mic + meeting audio</small></span></div>
+          <div class="link"><span class="pulse"></span></div>
+          <div class="node core"><span class="ic"><img src="assets/icon-256.png" alt="" /></span><span class="txt"><b>Your laptop</b><small>transcribes · labels · summarises</small></span></div>
+          <div class="link cut"><span class="x">✕</span></div>
+          <div class="node cloud"><span class="ic">☁️</span><span class="txt"><b>The cloud</b><small>never involved</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+    <section class="section" id="pricing">
+      <div class="section-head">
+        <span class="eyebrow">Pricing</span>
+        <h2>Free. <span class="grad">Actually free.</span></h2>
+        <p>No trial that runs out. No minutes cap. No "Pro" upsell hiding the good stuff. It's already PRO.</p>
+      </div>
+      <div class="price-row">
+        <div class="price-card others">
+          <div class="pc-head">Typical AI notetakers</div>
+          <div class="pc-price">$10–30<small>/month</small></div>
+          <ul>
+            <li class="no">Monthly subscription</li>
+            <li class="no">Your audio uploaded to their cloud</li>
+            <li class="no">Minute limits on free plans</li>
+            <li class="no">A bot joins your calls</li>
+          </ul>
+        </div>
+        <div class="price-card ours">
+          <div class="pc-ribbon">Speakup PRO</div>
+          <div class="pc-head">Everything, forever</div>
+          <div class="pc-price">$0<small>/forever</small></div>
+          <ul>
+            <li>Unlimited recordings &amp; transcripts</li>
+            <li>Speaker labels, AI notes &amp; assistant</li>
+            <li>Writing check included</li>
+            <li>100% on-device &amp; offline</li>
+          </ul>
+          <a href="#download" class="btn btn-glow btn-block">Download free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="section" id="how">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>From <span class="nw">"let's start"</span> to <span class="grad nw">"notes sent"</span><br />in three steps.</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-n">1</span>
+          <h3>Download &amp; open</h3>
+          <p>Install in under a minute. On first launch it fetches its on-device AI once, in the background.</p>
+        </li>
+        <li>
+          <span class="step-n">2</span>
+          <h3>Hit record</h3>
+          <p>Click the floating pill or press <kbd>⌥</kbd><kbd>R</kbd>. Talk like a human. Watch the transcript appear.</p>
+        </li>
+        <li>
+          <span class="step-n">3</span>
+          <h3>Stop. Done.</h3>
+          <p>Notes, action items and speaker labels are ready. Ask follow-ups, polish, or export.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Questions, <span class="grad">answered.</span></h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Is it really free? What's the catch?</summary>
+          <p>It's really free. Because everything runs on your own computer, there are no server costs to pass on to you — so there's no subscription, no account and no ads.</p>
+        </details>
+        <details>
+          <summary>Does my audio get uploaded anywhere?</summary>
+          <p>No. Speech recognition, speaker detection and the AI all run locally. The only internet use is a one-time download of the AI models on first launch; after that you can record with Wi-Fi off.</p>
+        </details>
+        <details>
+          <summary>Will it transcribe people on Zoom, Google Meet or Teams?</summary>
+          <p>Yes. Turn on "Also capture computer audio" and Speakup PRO records the call audio alongside your mic. No bot joins the meeting, so nobody sees an extra participant.</p>
+        </details>
+        <details>
+          <summary>What do I need to run it?</summary>
+          <p>A Mac (Apple Silicon or Intel, macOS 12 or later) or a Windows 10/11 PC, 8 GB of RAM or more, and about 1.5 GB of free disk space. Newer computers write notes faster — on Apple Silicon it's quick.</p>
+        </details>
+        <details>
+          <summary>How accurate is it?</summary>
+          <p>Very good for clear audio, using the open Whisper speech model — and a high-accuracy pass re-checks each recording when you stop. Like any AI, it can occasionally mishear a name or mix up who said what, so give important details a quick look.</p>
+        </details>
+        <details>
+          <summary>Why does my Mac or Windows show a warning the first time?</summary>
+          <p>The installers aren't code-signed yet. On Mac, right-click the app and choose <b>Open</b>. On Windows, click <b>More info → Run anyway</b>. You only need to do this once.</p>
+        </details>
+        <details>
+          <summary>Who made Speakup PRO?</summary>
+          <p>Speakup PRO was built by Sanchit Goyal. Ask the in-app assistant — it'll tell you the same.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ================= DOWNLOAD ================= -->
+    <section class="section download" id="download">
+      <div class="dl-card">
+        <div class="dl-glow" aria-hidden="true"></div>
+        <img src="assets/icon-256.png" alt="Speakup PRO app icon" class="dl-icon" width="96" height="96" />
+        <h2>Your next meeting is<br /><span class="grad">already taken care of.</span></h2>
+        <p>Free download. No account. Start recording in under a minute.</p>
+        <div class="dl-grid">
+          <a class="dl-btn" data-platform="mac-arm" href="#">
+            <span class="dl-os"></span>
+            <span><b>Mac — Apple Silicon</b><small>M1–M4 · .dmg · 143 MB</small></span>
+          </a>
+          <a class="dl-btn" data-platform="mac-intel" href="#">
+            <span class="dl-os"></span>
+            <span><b>Mac — Intel</b><small>.dmg · 147 MB</small></span>
+          </a>
+          <a class="dl-btn" data-platform="windows" href="#">
+            <span class="dl-os win"></span>
+            <span><b>Windows 10 / 11</b><small>64-bit · .exe · 134 MB</small></span>
+          </a>
+        </div>
+        <p class="dl-help">Not sure which Mac? Apple menu → About This Mac. "Chip: Apple M…" = Apple Silicon.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand"><img src="assets/icon-256.png" alt="" width="28" height="28" /><span>Speakup <b>PRO</b></span></div>
+    <p>Free, private AI meeting notes. Built by <b>Sanchit Goyal</b>.</p>
+    <p class="small">© <span id="year">2026</span> Speakup PRO</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
