@@ -1,5 +1,11 @@
 // Speakup PRO — website interactions
 (() => {
+  // ------------------------------------------------------------ instagram
+  // Your Instagram username (without @). Every follow link and handle on the page uses this.
+  const INSTAGRAM = "speakup.pro.app";
+  for (const a of document.querySelectorAll("[data-ig-link]")) a.href = `https://www.instagram.com/${INSTAGRAM}/`;
+  for (const el of document.querySelectorAll("[data-ig-handle]")) el.textContent = INSTAGRAM;
+
   // ------------------------------------------------------------ downloads
   // Point these at wherever the installers are hosted (e.g. GitHub Releases).
   const RELEASE = "https://github.com/sanchit-SpeakupPro/speakup-pro/releases/latest/download/";
@@ -135,7 +141,7 @@
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in", "play"); io.unobserve(e.target); }
   }, { threshold: 0.15 });
-  document.querySelectorAll(".section-head, .tile, .polish-card, .privacy-grid, .price-card, .steps li, .faq-list, .dl-card").forEach((el) => { el.classList.add("reveal"); io.observe(el); });
+  document.querySelectorAll(".section-head, .tile, .polish-card, .privacy-grid, .price-card, .steps li, .faq-list, .ig-card, .dl-card").forEach((el) => { el.classList.add("reveal"); io.observe(el); });
   document.querySelectorAll(".chat").forEach((el) => io.observe(el));
 
   // spotlight glow following the cursor on tiles
