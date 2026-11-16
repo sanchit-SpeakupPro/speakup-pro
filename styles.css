@@ -356,3 +356,5 @@ details p { color: var(--muted); margin: -6px 0 22px; max-width: 680px; }
   .ig-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 }
 .ig-handle .at { font-family: Inter, system-ui, sans-serif; font-weight: 700; margin-right: 1px; }
+.foot-link { color: var(--muted); font-weight: 500; }
+.foot-link:hover { color: var(--violet-2); }
