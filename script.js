@@ -10,9 +10,9 @@
   // Point these at wherever the installers are hosted (e.g. GitHub Releases).
   const RELEASE = "https://github.com/sanchit-SpeakupPro/speakup-pro/releases/latest/download/";
   const DOWNLOADS = {
-    "mac-arm": { file: "Speakup-PRO-1.0.0-mac-arm64.dmg", label: "Download for Mac", size: "143 MB" },
-    "mac-intel": { file: "Speakup-PRO-1.0.0-mac-x64.dmg", label: "Download for Mac (Intel)", size: "147 MB" },
-    windows: { file: "Speakup-PRO-Setup-1.0.0-windows.exe", label: "Download for Windows", size: "134 MB" },
+    "mac-arm": { file: "Speakup-PRO-1.1.0-mac-arm64.dmg", label: "Download for Mac", size: "153 MB" },
+    "mac-intel": { file: "Speakup-PRO-1.1.0-mac-x64.dmg", label: "Download for Mac (Intel)", size: "158 MB" },
+    windows: { file: "Speakup-PRO-Setup-1.1.0-windows.exe", label: "Download for Windows", size: "139 MB" },
   };
   const APPLE = "var(--apple)", WIN = "var(--windows)";
 
